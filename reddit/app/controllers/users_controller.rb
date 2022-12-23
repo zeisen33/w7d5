@@ -6,14 +6,14 @@ class UsersController < ApplicationController
     end
 
     def create
-        render :create
-        # @user = User.new(user_params)
-        # if @user.save
-        #     login!(@user)
-        #     redirect_to subs_url
-        # else
-        #     redirect_to new_user_url
-        # end
+        # render :create
+        @user = User.new(user_params)
+        if @user.save
+            login!(@user)
+            redirect_to subs_url
+        else
+            redirect_to new_user_url
+        end
     end
 
     def show
@@ -26,11 +26,17 @@ class UsersController < ApplicationController
     end
 
     def edit
-        
+        @user = User.find_by(params[:id])
+        render :edit
     end
 
     def update
-        
+        @user = User.find_by(params[:id])
+        if @user.update(user_params)
+            redirect_to user_url(@user)
+        else
+            render :edit
+        end
     end
 
     private

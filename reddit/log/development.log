@@ -84,3 +84,334 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 111ms (Views: 111.0ms | ActiveRecord: 0.0ms | Allocations: 1748)
 
 
+Started GET "/users/new" for ::1 at 2022-12-23 11:57:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 491)
+  Rendered layout layouts/application.html.erb (Duration: 58.9ms | Allocations: 7447)
+Completed 200 OK in 111ms (Views: 75.5ms | ActiveRecord: 0.7ms | Allocations: 16236)
+
+
+Started POST "/users" for ::1 at 2022-12-23 11:57:41 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = ? LIMIT ?[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 344ms (ActiveRecord: 3.2ms | Allocations: 6840)
+
+
+Started GET "/users/new" for ::1 at 2022-12-23 11:57:42 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 1415)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 1676)
+
+
+Started POST "/users" for ::1 at 2022-12-23 11:57:43 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = ? LIMIT ?[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 348ms (ActiveRecord: 0.9ms | Allocations: 3503)
+
+
+Started GET "/users/new" for ::1 at 2022-12-23 11:57:44 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1219)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1425)
+
+
+Started GET "/users/new" for ::1 at 2022-12-23 12:04:27 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 206)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 1792)
+Completed 200 OK in 25ms (Views: 10.3ms | ActiveRecord: 0.7ms | Allocations: 5687)
+
+
+Started GET "/users/new" for ::1 at 2022-12-23 12:05:08 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1766)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 2495)
+
+
+Started POST "/users" for ::1 at 2022-12-23 12:05:22 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"banana", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "banana"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = ? LIMIT ?[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 331ms (ActiveRecord: 1.8ms | Allocations: 3993)
+
+
+Started GET "/users/new" for ::1 at 2022-12-23 12:05:22 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1222)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 1447)
+
+
+Started POST "/users" for ::1 at 2022-12-23 12:05:34 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"banana", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "banana"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = ? LIMIT ?[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Create (4.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "session_token", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["username", "banana"], ["session_token", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["created_at", "2022-12-23 17:05:34.655666"], ["updated_at", "2022-12-23 17:05:34.655666"]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:46:in `reset_session_token!'
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? AND "users"."id" != ? LIMIT ?[0m  [["username", "banana"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:46:in `reset_session_token!'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = ? AND "users"."id" != ? LIMIT ?[0m  [["session_token", "[FILTERED]"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:46:in `reset_session_token!'
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["session_token", "[FILTERED]"], ["updated_at", "2022-12-23 17:05:34.677573"], ["id", 1]]
+  ↳ app/models/user.rb:46:in `reset_session_token!'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:46:in `reset_session_token!'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 359ms (ActiveRecord: 8.9ms | Allocations: 8707)
+
+
+Started GET "/users/1" for ::1 at 2022-12-23 12:05:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 104)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 1290)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.3ms | Allocations: 2253)
+
+
+Started GET "/users/1/edit" for ::1 at 2022-12-23 12:10:40 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 1816)
+Completed 200 OK in 25ms (Views: 13.6ms | ActiveRecord: 1.7ms | Allocations: 6928)
+
+
+Started GET "/users/1?_method=&user%5Busername%5D=banana" for ::1 at 2022-12-23 12:10:53 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"user"=>{"username"=>"banana"}, "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1262)
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 0.3ms | Allocations: 2228)
+
+
+Started GET "/users/1?_method=&user%5Busername%5D=banan" for ::1 at 2022-12-23 12:11:12 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"user"=>{"username"=>"banan"}, "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1181)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 1974)
+
+
+Started GET "/users/1/edit" for ::1 at 2022-12-23 12:12:23 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 0.5ms | Allocations: 215)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 1787)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 3070)
+
+
+Started POST "/users/1" for ::1 at 2022-12-23 12:12:26 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/1"):
+  
+Started POST "/users/1" for ::1 at 2022-12-23 12:12:30 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/1"):
+  
+Started GET "/users/1/edit" for ::1 at 2022-12-23 12:15:38 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 0.2ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 1515)
+Completed 200 OK in 22ms (Views: 11.8ms | ActiveRecord: 1.3ms | Allocations: 6268)
+
+
+Started GET "/users/1/edit" for ::1 at 2022-12-23 12:15:40 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 0.2ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1219)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 2125)
+
+
+Started POST "/users/1" for ::1 at 2022-12-23 12:15:45 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/1"):
+  
+Started POST "/users/1" for ::1 at 2022-12-23 12:16:00 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/1"):
+  
+Started POST "/users/1" for ::1 at 2022-12-23 12:16:52 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/1"):
+  
+Started GET "/users/1/edit" for ::1 at 2022-12-23 12:17:43 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 281)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1873)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 0.5ms | Allocations: 3155)
+
+
+Started POST "/users.1" for ::1 at 2022-12-23 12:17:53 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"banana"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "banana"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = ? LIMIT ?[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 12ms (ActiveRecord: 1.4ms | Allocations: 3844)
+
+
+Started GET "/users/new" for ::1 at 2022-12-23 12:17:53 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 144)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 1330)
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 1607)
+
+
+Started GET "/users/new/1" for ::1 at 2022-12-23 12:18:39 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users/new/1"):
+  
+Started GET "/users/1/edit" for ::1 at 2022-12-23 12:18:45 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 0.6ms | Allocations: 64)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 1245)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.2ms | Allocations: 2050)
+
+
+Started GET "/users/1" for ::1 at 2022-12-23 12:18:47 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 100)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 1282)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.2ms | Allocations: 2130)
+
+
+Started GET "/users/1/edit" for ::1 at 2022-12-23 12:18:53 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:29:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (Duration: 0.2ms | Allocations: 64)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1236)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 2029)
+
+
+Started POST "/users.1" for ::1 at 2022-12-23 12:19:03 -0500
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"bana"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "bana"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = ? LIMIT ?[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:11:in `create'
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms | Allocations: 3412)
+
+
+Started GET "/users/new" for ::1 at 2022-12-23 12:19:03 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1219)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 1423)
+
+
