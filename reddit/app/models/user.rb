@@ -49,7 +49,9 @@ class User < ApplicationRecord
 
     has_many :subreddits,
         foreign_key: :moderator_id,
-        class_name: :Sub
+        class_name: :Sub,
+        dependent: :destroy
 
-    has_many :posts
+    has_many :posts,
+        dependent: :destroy
 end
