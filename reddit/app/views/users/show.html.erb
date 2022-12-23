@@ -1,2 +1,5 @@
 <p><%= @user.username%>
 </p>
+<% if logged_in? %>
+    <a href="<%= edit_user_url(@user)%>"> Edit user </a>
+<% end %>
