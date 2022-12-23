@@ -60,3 +60,27 @@ FOREIGN KEY ("post_id")
   [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users" for ::1 at 2022-12-23 11:52:30 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/users/new" for ::1 at 2022-12-23 11:52:32 -0500
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 12.9ms | Allocations: 246)
+  Rendered layout layouts/application.html.erb (Duration: 1106.2ms | Allocations: 6622)
+Completed 200 OK in 1302ms (Views: 1134.4ms | ActiveRecord: 15.9ms | Allocations: 14039)
+
+
+Started POST "/users" for ::1 at 2022-12-23 11:53:15 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"kevin", "password"=>"[FILTERED]"}}
+  Rendering layout layouts/application.html.erb
+  Rendering users/create.html.erb within layouts/application
+  Rendered users/create.html.erb within layouts/application (Duration: 8.7ms | Allocations: 96)
+  Rendered layout layouts/application.html.erb (Duration: 97.8ms | Allocations: 1415)
+Completed 200 OK in 111ms (Views: 111.0ms | ActiveRecord: 0.0ms | Allocations: 1748)
+
+
